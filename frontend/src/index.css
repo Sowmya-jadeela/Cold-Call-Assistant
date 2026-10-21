@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text: #172033;
+  --text-muted: #667085;
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --border: #e5eaf2;
+  --accent: #2448d8;
+  --accent-hover: #1938b4;
+  --accent-soft: #eef2ff;
+  --success: #16845b;
+  --danger: #c43242;
+  --radius: 14px;
+  --shadow: 0 8px 28px rgba(24, 39, 75, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid #d8dfeb;
+  border-radius: 9px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(36, 72, 216, 0.1);
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 17px;
+  font-weight: 700;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(36, 72, 216, 0.3);
+  outline-offset: 2px;
+}
+
+button[type='submit'],
+.btn-primary,
+.primary-button {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+button[type='submit']:hover:not(:disabled),
+.btn-primary:hover:not(:disabled),
+.primary-button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+code,
+pre {
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* Reusable application surfaces */
+.card,
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.muted,
+.subtitle,
+.description {
+  color: var(--text-muted);
+}
+
+.badge,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    letter-spacing: -0.7px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 11px 12px;
+  }
+
+  button {
+    padding: 10px 13px;
+  }
+}

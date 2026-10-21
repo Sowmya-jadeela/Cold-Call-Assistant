@@ -1,0 +1,12 @@
+backend/.env
+backend/.venv/
+**/__pycache__/
+frontend/node_modules/
+frontend/dist/
+@"
+backend/.env
+backend/.venv/
+**/__pycache__/
+frontend/node_modules/
+frontend/dist/
+"@ | Set-Content -Encoding utf8 .gitignore
